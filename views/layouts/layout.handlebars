@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><title>{{title}}</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    </head>
+
+  <body>
+      <nav class="navbar navbar-expand-lg navbar-light">
+                    <div class="container"><a href="/" class="navbar-brand">Furnitureland</a>
+                        <div class="d-flex ml-auto">
+
+                        </div>
+                        <div class="collapse navbar-collapse" id="globalNavbar">
+                         
+                            <ul class="navbar-nav mr-auto order-1">
+                                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" href="#" >About</a>
+                                 </li><li class="nav-item"><a class="nav-link" href="#">Services</a></li></ul>
+                                
+                                 <ul class="navbar-nav d-none d-lg-flex ml-2 order-3">
+                                   {{#if user}}
+                                      <li class="nav-item"><a class="nav-link" href="/users/dashboard">Dashboard</a></li>
+                                   <li class="nav-item"><a class="nav-link" href="/users/signout">Logout</a></li>
+                                    
+                                   
+                                 {{else}}
+                                      <li class="nav-item"><a class="nav-link" href="/users/signin">Sign in</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="/users/signup">Sign up</a></li>
+                              
+                               {{/if}}
+                                 </ul>
+                                </div>
+                    </div>
+                </nav>
+
+<div class="row">
+    <div class="container">
+    <div class="col-lg-12">
+        {{#if success_msg}}
+<div class="alert alert-success">{{success_msg}}</div>
+{{/if}}
+
+{{#if error_msg}}
+<div class="alert alert-danger">{{error_msg}}</div>
+{{/if}}
+{{#if error}}
+<div class="alert alert-danger">{{error}}</div>
+{{/if}}
+
+    </div>
+
+    </div>
+</div>
+
+    
+{{{body}}}
+
+<footer class="footer">
+            <div class="container">
+                <div class="footer__inner">
+               
+                                                <div class="footer__item d-lg-flex justify-content-lg-between align-items-lg-center">
+                        <ul id="menu-footer" class="nav sub-nav footer__sub-nav"><li id="menu-item-1194" class="menu-item "><a title="Help Center" href="#">Help Center</a></li>
+<li class="menu-item"><a title="Terms of Service" href="#">Terms of Service</a></li>
+<li  class="menu-item"><a title="Licenses" href="#">Licenses</a></li>
+</ul>                        <p class="hidden-sm-down d-none d-lg-block">© 2018 Samerd Inc. </a></p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+  </body>
+
+</html>
